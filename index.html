@@ -4,8 +4,20 @@
 	</head>
 	<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="ordurovwk5zz8ym">
 	</script>
+	<script type="text/javascript">
+		function update_url(event) {
+			var url = event.value;
+			var link = document.getElementById("button");
+			link.setAttribute("href",url);
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="main.css">
 
 <body>
-	<a href="https://dl.dropboxusercontent.com/s/deroi5nwm6u7gdf/advice.png" class="dropbox-saver"></a>
+	<div id = "container">
+		<input placeholder="Enter the url of the file here" id = "input" onchange="update_url(this)">
+		<a href="" class="dropbox-saver" id = "button"></a>
+	</div>
 </body>
+
 </html>
